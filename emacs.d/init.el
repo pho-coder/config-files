@@ -9,18 +9,11 @@
 (require 'package)
 
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
-(defvar my-packages '(starter-kit
-                      starter-kit-lisp
-                      starter-kit-bindings
-                      starter-kit-eshell
-;;                      clojure-mode
-;;                      clojure-test-mode
-;;                      nrepl
-                      color-theme
-                      clojurescript-mode
+(defvar my-packages '(projectile
+                      clojure-mode
                       emmet-mode
                       cider))
 
@@ -28,7 +21,6 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
-(require 'color-theme)
 (load-theme 'tango-dark)
 
 (add-hook 'sgml-mode-hook 'emmet-mode)
