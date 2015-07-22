@@ -29,12 +29,7 @@
     (package-install p)))
 
 (require 'color-theme)
-
-;(color-theme-initialize)
-;(color-theme-dark-blue2)
-(color-theme-calm-forest)
-;(color-theme-clarity)
-;(color-theme-clarity)
+(load-theme 'tango-dark)
 
 (add-hook 'sgml-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook 'emmet-mode)
