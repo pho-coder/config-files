@@ -12,25 +12,32 @@
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
-(defvar my-packages '(projectile
+(defvar my-packages '(better-defaults
+                      projectile
+                      paredit
                       clojure-mode
-                      emmet-mode
+                      clojure-mode-extra-font-locking
                       cider))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
 
-(load-theme 'tango-dark)
+;; (load-theme 'tango-dark)
+(load-theme 'zenburn t)
 
-(add-hook 'sgml-mode-hook 'emmet-mode)
-(add-hook 'css-mode-hook 'emmet-mode)
+;; Spaces only (no tab characters at all)!
+(setq-default indent-tabs-mode nil)
 
+;; for clojure
+(add-to-list 'load-path "~/.emacs.d/customizations")
+(load "setup-clojure.el")
+
+;; for mac only
 (defun my-fullscreen ()
   (interactive)
   (x-send-client-message
    nil 0 nil "_NET_WM_STATE" 32
    '(2 "_NET_WM_STATE_FULLSCREEN" 0)))
-
 (global-set-key [f11] 'my-fullscreen)
 (put 'upcase-region 'disabled nil)
