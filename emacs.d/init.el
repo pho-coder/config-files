@@ -17,7 +17,8 @@
                       paredit
                       clojure-mode
                       clojure-mode-extra-font-locking
-                      cider))
+                      cider
+                      emmet-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
