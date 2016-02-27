@@ -31,8 +31,8 @@
 (setq-default indent-tabs-mode nil)
 
 ;; for clojure
-(add-to-list 'load-path "~/.emacs.d/customizations")
-(load "setup-clojure.el")
+;;(add-to-list 'load-path "~/.emacs.d/customizations")
+;;(load "setup-clojure.el")
 
 ;; for mac only
 (defun my-fullscreen ()
