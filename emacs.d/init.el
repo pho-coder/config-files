@@ -12,7 +12,8 @@
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
-(defvar my-packages '(better-defaults
+(defvar my-packages '(zenburn-theme
+                      better-defaults
                       projectile
                       paredit
                       clojure-mode
