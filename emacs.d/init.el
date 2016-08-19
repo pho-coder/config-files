@@ -31,6 +31,10 @@
 ;; Spaces only (no tab characters at all)!
 (setq-default indent-tabs-mode nil)
 
+;; fullscreen
+(custom-set-variables
+  '(initial-frame-alist (quote ((fullscreen . maximized)))))
+
 ;; for clojure
 (add-to-list 'load-path "~/.emacs.d/customizations")
 (load "setup-clojure.el")
