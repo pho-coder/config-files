@@ -3,7 +3,11 @@
 ;;;;
 
 ;; Enable paredit for Clojure
-(add-hook 'clojure-mode-hook 'enable-paredit-mode)
+;(add-hook 'clojure-mode-hook 'enable-paredit-mode)
+
+;; Enable parinfer for Clojure
+(require 'parinfer-mode)
+(add-hook 'clojure-mode-hook 'parinfer-mode)
 
 ;; This is useful for working with camel-case tokens, like names of
 ;; Java classes (e.g. JavaClassName)
