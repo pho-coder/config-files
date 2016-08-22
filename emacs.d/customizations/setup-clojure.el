@@ -3,7 +3,7 @@
 ;;;;
 
 ;; Enable paredit for Clojure
-;(add-hook 'clojure-mode-hook 'enable-paredit-mode)
+(add-hook 'clojure-mode-hook 'enable-paredit-mode)
 
 ;; Enable parinfer for Clojure
 (require 'parinfer-mode)
