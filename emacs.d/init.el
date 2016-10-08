@@ -19,7 +19,8 @@
                       clojure-mode
                       clojure-mode-extra-font-locking
                       cider
-                      emmet-mode))
+                      emmet-mode
+                      elpy))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -35,9 +36,10 @@
 (custom-set-variables
   '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
-;; for clojure
+;; for clojure python
 (add-to-list 'load-path "~/.emacs.d/customizations")
 (load "setup-clojure.el")
+(load "setup-python.el")
 
 ;; for mac only
 (defun my-fullscreen ()
