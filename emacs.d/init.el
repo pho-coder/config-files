@@ -19,6 +19,7 @@
                       clojure-mode
                       clojure-mode-extra-font-locking
                       cider
+                      company
                       emmet-mode
                       elpy))
 
