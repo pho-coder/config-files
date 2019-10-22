@@ -81,6 +81,7 @@
 
 ;; autopair-mode
 (require 'autopair)
+(autopair-global-mode)
 
 ;; Language Hooks
 ;; Python
